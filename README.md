@@ -1,20 +1,61 @@
-# 抗憂鬱藥物使用資料分析與自動化 / Antidepressant Usage Data Analysis and Automation
+# Taiwan Antidepressant Usage Analysis 台灣抗憂鬱藥物使用分析
 
-這個專案從台灣健保資料庫的 API 下載並處理抗憂鬱藥物使用數據。它會進行數據清理、統計分析，並定期自動更新結果。所有分析結果會儲存為 Excel 和 CSV 文件。
+[English](#english) | [中文](#chinese)
 
-This project downloads and processes antidepressant usage data from the Taiwan National Health Insurance (NHI) API. It performs data cleaning, statistical analysis, and automatically updates the results periodically. All analysis results are saved as Excel and CSV files.
+## English
 
-## 使用技術 / Technologies Used
+### Project Overview
+This project demonstrates how to utilize Python for healthcare database data extraction, organization, statistical analysis, and report generation using Taiwan's National Health Insurance Database. The project showcases automated processes for data processing and analysis of antidepressant usage patterns.
 
-- **Python**: 用於開發整體專案。 / Python was used for overall project development.
-- **pandas**: 用於數據處理和分析。 / pandas was used for data manipulation and analysis.
-- **requests**: 用於從 API 下載數據。 / requests was used to fetch data from the API.
-- **schedule**: 用於設置定期任務，實現自動更新。 / schedule was used to set up periodic tasks for automatic updates.
+### Technologies Used
+- **Python** - Primary programming language
+- **Jupyter Notebook** - Interactive computing environment
+- **Data Processing and Analysis**:
+  - Pandas - Data manipulation and analysis
+  - NumPy - Numerical computing
+- **Data Visualization**:
+  - Matplotlib - Basic plotting and visualization
+    - Line plots for time series trend analysis
+    - Pie charts for proportion distribution
+- **Machine Learning**:
+  - Random Forest - For predictive modeling and classification
+  - Scikit-learn - Machine learning library
 
-## 主要功能 / Main Features
+### Features
+- Healthcare database data extraction and preprocessing
+- Antidepressant usage pattern analysis using:
+  - Time series trends visualization
+  - Proportional distribution analysis
+- Predictive modeling using Random Forest
+- Basic statistical analysis
+- Automated report generation
 
-- 從 API 或 CSV 讀取數據。 / Fetch data from API or read from CSV.
-- 計算年齡、性別和地區的統計數據。 / Calculate statistics by age, gender, and region.
-- 自動化定期更新數據。 / Automate periodic data updates.
-- 儲存統計數據為 Excel 和 CSV 文件。 / Save the statistical data as Excel and CSV files.
+---
 
+## Chinese
+
+### 專案概述
+本專案展示如何使用 Python 對健保資料庫進行資料擷取、整理、統計分析及報表製作。專案自動化處理流程，針對抗憂鬱藥物使用模式進行深入分析。
+
+### 使用技術
+- **Python** - 主要程式語言
+- **Jupyter Notebook** - 互動式運算環境
+- **資料處理與分析**：
+  - Pandas - 資料處理與分析
+  - NumPy - 數值運算
+- **資料視覺化**：
+  - Matplotlib - 基礎圖表繪製
+    - 折線圖呈現時間序列趨勢
+    - 圓餅圖展示比例分布
+- **機器學習**：
+  - 隨機森林 - 用於預測模型和分類
+  - Scikit-learn - 機器學習套件
+
+### 功能特色
+- 健保資料擷取與預處理
+- 抗憂鬱藥物使用模式分析：
+  - 時間序列趨勢視覺化
+  - 比例分布分析
+- 使用隨機森林進行預測建模
+- 基本統計分析
+- 自動化報表生成
