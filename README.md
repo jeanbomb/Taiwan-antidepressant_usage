@@ -1,56 +1,20 @@
-# 健保資料庫統計分析專案
+# 抗憂鬱藥物使用資料分析與自動化 / Antidepressant Usage Data Analysis and Automation
 
-## 專案簡介
-此專案旨在示範如何利用Python進行健保資料庫的數據撈取、整理、統計分析及結果表格製作。專案內容包括資料擷取、資料處理、統計分析和報表生成，並展示如何自動化這些流程。
+這個專案從台灣健保資料庫的 API 下載並處理抗憂鬱藥物使用數據。它會進行數據清理、統計分析，並定期自動更新結果。所有分析結果會儲存為 Excel 和 CSV 文件。
 
-## 專案結構
-```
-diabetes_analysis_project/
-├── config/
-│   ├── __init__.py
-│   ├── api_config.py          # API配置
-│   └── report_config.py       # 報表配置
-├── src/
-│   ├── __init__.py
-│   ├── api_handler.py         # API請求處理
-│   ├── data_sync.py           # 資料同步
-│   ├── data_processing.py     # 資料處理
-│   ├── data_analysis.py       # 統計分析
-│   └── report_updater.py      # 報表更新
-├── output/
-│   ├── raw_data/              # 原始資料
-│   ├── processed_data/        # 處理後資料
-│   └── reports/               # 分析報告
-├── logs/                      # 記錄檔
-├── main.py                    # 主程式
-└── requirements.txt           # 套件需求
-```
+This project downloads and processes antidepressant usage data from the Taiwan National Health Insurance (NHI) API. It performs data cleaning, statistical analysis, and automatically updates the results periodically. All analysis results are saved as Excel and CSV files.
 
-## 使用方法
+## 使用技術 / Technologies Used
 
-### 1. 安裝必要套件
-請確保您已經安裝了必要的Python套件，您可以通過以下命令來安裝：
-```bash
-pip install -r requirements.txt
-```
+- **Python**: 用於開發整體專案。 / Python was used for overall project development.
+- **pandas**: 用於數據處理和分析。 / pandas was used for data manipulation and analysis.
+- **requests**: 用於從 API 下載數據。 / requests was used to fetch data from the API.
+- **schedule**: 用於設置定期任務，實現自動更新。 / schedule was used to set up periodic tasks for automatic updates.
 
-### 2. 配置API金鑰和參數
-請在 `config/api_config.py` 中配置您的API金鑰和相關參數。
+## 主要功能 / Main Features
 
-### 3. 執行主程式
-您可以通過以下命令來執行主程式：
-```bash
-python main.py
-```
+- 從 API 或 CSV 讀取數據。 / Fetch data from API or read from CSV.
+- 計算年齡、性別和地區的統計數據。 / Calculate statistics by age, gender, and region.
+- 自動化定期更新數據。 / Automate periodic data updates.
+- 儲存統計數據為 Excel 和 CSV 文件。 / Save the statistical data as Excel and CSV files.
 
-## 主要功能
-1. 自動化資料擷取：從健保資料庫定期撈取資料。
-2. 資料處理：處理和清洗原始資料。
-3. 統計分析：分析病患特徵和就醫行為。
-4. 報表生成：生成詳細的分析報告和視覺化圖表。
-
-## 注意事項
-1. 確保您有適當的資料庫存取權限。
-2. 定期檢查記錄檔以確保系統正常運行。
-3. 備份重要資料以防止資料丟失。
-4. 遵守資料保密規範，保護患者隱私。
